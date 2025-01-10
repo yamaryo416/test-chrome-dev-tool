@@ -89,3 +89,53 @@ nav.collapsed ul {
 nav.collapsed .nav-toggle {
   transform: rotate(180deg);
 }
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header header"
+      "main main";
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    height: 100vh;
+    z-index: 99;
+    transition: left 0.3s ease;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
