@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
   background-color: #f0f0f0;
   display: grid;
   grid-template-areas:
@@ -16,7 +15,7 @@ header {
   text-align: center;
   grid-area: header;
   border-bottom: 1px solid #ccc;
-  box-shadow: 0 0 2cap rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -79,10 +78,12 @@ main {
 
 nav.collapsed {
   width: 50px;
+  transition: width 0.3s ease;
 }
 
 nav.collapsed ul {
   opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 nav.collapsed .nav-toggle {
