@@ -10,6 +10,7 @@ const fetchPosts = async () => {
     const latestPosts = posts.slice(0, 10); // 最新10件のみ取得
 
     const main = document.querySelector('main');
+    console.table(latestPosts);
     latestPosts.forEach(post => {
       const card = document.createElement('div');
       card.className = 'card';
@@ -25,3 +26,7 @@ const fetchPosts = async () => {
 }
 
 fetchPosts();
+console.info("情報");
+console.log("ログ");
+console.warn("警告");
+console.error("エラー");
